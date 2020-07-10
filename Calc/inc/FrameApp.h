@@ -5,25 +5,23 @@
 #endif
 
 #include <wx/statline.h>
-#include <string>
-#include <regex>
-#include <vector>
 
-using namespace std;
+#include "includes.h"
+#include "calcParser/Lexer.h"
+#include "calcParser/Token.h"
+
+using namespace calcParser;
 
 class FrameApp : public wxFrame
 {
 public:
-    FrameApp(const wxString& title, const wxPoint& pos, const wxSize& size);
+    string bufer;
 
     wxTextCtrl* calcEdit;
 
-    string BUFER = "";
-    vector<string> OPERATIONS;
-
-    void btnOnClick(wxCommandEvent& event);
+    FrameApp(const wxString& title, const wxPoint& pos, const wxSize& size);
+    void OnBtnClick(wxCommandEvent& event);
     void OnKeyDown(wxKeyEvent& event);
     void Enter(const char* value);
-    void CalcEditUpdate(string bufer);
-    void ParseBUFER(string bufer);
+    void Parse(string input);
 };

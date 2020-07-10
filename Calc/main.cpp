@@ -8,6 +8,6 @@ bool App::OnInit()
     frame->SetSizeHints(wxSize(400, 550), wxSize(400, 550));
     frame->Show(true);
 
-    this->Connect(wxEVT_KEY_DOWN, wxKeyEventHandler(FrameApp::OnKeyDown));
+    this->Bind(wxEVT_KEY_DOWN, &FrameApp::OnKeyDown, frame);
     return true;
 }

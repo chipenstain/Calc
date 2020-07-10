@@ -143,10 +143,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="src\calcParser\Lexer.cpp" />
+    <ClCompile Include="src\calcParser\Token.cpp" />
     <ClCompile Include="src\FrameApp.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="inc\calcParser\Lexer.h" />
+    <ClInclude Include="inc\calcParser\Token.h" />
     <ClInclude Include="inc\FrameApp.h" />
+    <ClInclude Include="inc\includes.h" />
     <ClInclude Include="main.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
